@@ -1,0 +1,139 @@
+﻿
+<!-- 这是 PCL2 的主页自定义文件。你可以通过修改这个文件来自定义 PCL2 主页：添加文本、打开网页、启动游戏，等等。
+     如果你倒腾这个文件把 PCL2 玩炸了，把这个文件直接删除就行了。
+     如果你懂得 WPF 的布局文件编写，你甚至可以做出不少的新玩意儿…… -->
+    
+<local:MyCard Title="LiZi Minecraft启动器">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,0,0,4"
+                   Text="这是基于PCL构建的Minecraft启动器" />
+        <TextBlock Margin="0,0,0,4" Foreground="#8C7721"
+                   Text="离子团队官方启动器" />
+        <TextBlock Margin="0,0,0,4" Foreground="#8C7721"
+                   Text="V1.52" />
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="快速启动游戏">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap"
+                 Text="快捷启动" />
+        <local:MyButton Margin="0,8,0,0" Width="250" Height="35"
+                 Text="进入离子SMP" EventType="启动游戏" EventData="1.16.5|smp.lizimc.top" ToolTip="服务器 IP：smp.lizimc.top" />
+        <local:MyButton Margin="0,8,0,8" Width="200" Height="35"
+                   Text="启动上次的版本" EventType="打开文件" EventData="LatestLaunch.bat" />
+        <TextBlock TextWrapping="Wrap"
+                 Text="你也可以选择以下的版本来启动" />
+        <local:MyButton Margin="0,8,0,10" Width="250" Height="35"
+                 Text="1.8.9" EventType="启动游戏" EventData="1.8.9" />
+        <local:MyButton Margin="0,8,0,10" Width="250" Height="35"
+                 Text="1.12.2" EventType="启动游戏" EventData="1.12.2" />
+        <local:MyButton Margin="0,8,0,10" Width="250" Height="35"
+                 Text="1.15.2" EventType="启动游戏" EventData="1.15.2" />
+        <local:MyButton Margin="0,8,0,10" Width="250" Height="35"
+                 Text="1.16.5" EventType="启动游戏" EventData="1.16.5" />
+        <local:MyButton Margin="0,8,0,10" Width="250" Height="35"
+                 Text="1.18.2" EventType="启动游戏" EventData="1.18.2" />
+        <local:MyButton Margin="0,8,0,10" Width="250" Height="35"
+                 Text="最新发布版本" EventType="启动游戏" EventData="1.20.4" />
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="新闻">
+    <StackPanel Margin="25,35,23,15">
+        <TextBlock TextWrapping="Wrap"
+                   Text="Minecraft新闻"/>
+        <TextBlock TextWrapping="Wrap"
+                   Text="===================="/>
+        <TextBlock TextWrapping="Wrap"
+                   Text="Minecraft传奇宣布停止更新"/>
+        <Image Height="160" HorizontalAlignment="Center" Source="http://api.lizimc.top/launcher/news/mcle.png" />
+        <TextBlock TextWrapping="Wrap"
+                   Text="2024年1月10日，推迟的2023年12月失落的传奇已更新，主题为“白雪与猪鼻”不过，官方称此后将不再发布任何新内容，包括传奇游戏更新、失落的传奇、市场DLC、神话等。已有内容仍可继续游玩，官方发布了最后赠品：亮眼英雄皮肤，玩家可在传奇市场免费领取。MC传奇从发布到停更，仅不足9个月时间。" />     
+        <TextBlock TextWrapping="Wrap"
+                   Text="本新闻没有详情链接"/> 
+        <TextBlock TextWrapping="Wrap"
+                   Text="===================="/> 
+        <TextBlock TextWrapping="Wrap"
+                   Text="LiZi新闻"/>
+        <TextBlock TextWrapping="Wrap"
+                   Text="===================="/> 
+        <TextBlock TextWrapping="Wrap"
+                   Text="LiZi最新运营时间表"/> 
+        <TextBlock TextWrapping="Wrap"
+                   Text="1月19日，LiZiSMP于晚上20:00恢复不间断运营，假期期间玩家请合理安排游戏时间！"/>
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="崩溃反馈">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap"
+                   Text="测试中遇到问题？下列内容可以帮助您" />
+        <local:MyButton Margin="0,8,0,8" Width="200" Height="35"
+                   Text="反馈给MOJANG" EventType="打开网页" EventData="https://feedback.minecraft.net/" />
+        <local:MyButton Margin="0,8,0,8" Width="200" Height="35"
+                   Text="打开启动器日志" EventType="打开文件" EventData="Log1.txt" ToolTip="这里可能带有奔溃原因" />
+        <local:MyButton Margin="0,8,0,0" Width="200" Height="35"
+                   Text="定位上次的启动脚本" EventType="打开文件" EventData="explorer.exe|/select,LatestLaunch.bat" />
+    </StackPanel>
+</local:MyCard>
+    
+<local:MyCard Title="关于启动器">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,0,0,4"
+                   Text="本启动器基于PCL构建" />
+        <TextBlock Margin="0,0,0,4"
+                   Text="由 Minecraft离子团队 运营" />
+        <Image Height="50" HorizontalAlignment="Center" Source="http://api.lizimc.top/files/image/lizi_logo.png" />
+		<local:MyButton Margin="0,5,0,6" Width="250" Height="35"
+                    Text="访问TeamLiZi官网" EventType="打开网页" EventData="http://www.lizimc.top"/>
+        <TextBlock Margin="0,0,0,6"
+                   Text="Minecraft是Mojang出版的内容" />
+        <Image Height="100" HorizontalAlignment="Center" Source="http://api.lizimc.top/files/image/Mojang2020Logo.png" />
+		<local:MyButton Margin="0,5,0,6" Width="250" Height="35"
+                    Text="访问Minecraft官网" EventType="打开网页" EventData="https://www.minecraft.net/zh-hans"/>
+        <TextBlock Margin="0,0,0,6"
+                   Text="©Mojang Studios" />
+        <TextBlock Margin="0,0,0,6"
+                   Text="Minecraft”是 Mojang Synergies AB 的商标" />
+    </StackPanel>
+</local:MyCard>
+
+<!-- 
+
+全部通用的属性：
+ - Width、Height：设置宽度与高度
+ - ToolTip：设置鼠标指向时的提示文本
+ - Foreground：调整前景颜色（十六进制字符串，例如 #FF010203 代表 ARGB 中的 255,1,2,3。前两位代表不透明度，FF 为全不透明，00 为全透明）
+ - Background：调整背景颜色（使用类似 Background="{DynamicResource ColorBrush5}" 的格式以调用 PCL2 当前的主题颜色，修改末尾的数字编号以改变颜色浓度）
+ - Margin：调整外边距（格式为 左,上,右,下。例如 Margin="0,0,0,2" 即为 2 单位的下边距）
+ - HorizontalAlignment：设置对齐方式（Left、Center、Right）
+
+TextBlock（纯文本）：
+ - Text：设置显示的文本（如果要使用引号等特殊字符，自行百度 XAML 转义）
+ - TextWrapping：开启自动换行
+ - FontSize：设置字号
+ 
+Image（图片）：
+ - Source：要显示的图片的网址
+
+local:MyHint（提示条）：
+ - Text：设置显示的文本（&#xA; 代表换行）
+ - IsWarn：设置为 True 代表警告样式，False 代表提示样式
+ 
+local:MyButton（按钮）：
+ - Text：设置显示的文本
+ - Padding：设置内边距，格式与 Margin 一致
+ - ColorType：设置颜色主题（Highlight 为当前启动器的主题颜色，Red 为红色，默认为黑色）
+ - EventType、EventData：触发特定事件
+ 
+local:MyTextButton（文本按钮）：
+ - Text：设置显示的文本
+ - EventType、EventData：触发特定事件
+ 
+local:MyCard（卡片）：
+ - Title：设置显示的标题文本
+ - CanSwap：这张卡片是否可以折叠，True 为是，False 为否
+ - IsSwaped：这张卡片是否默认折叠，要求 CanSwap 必须为 True
+
+-->
